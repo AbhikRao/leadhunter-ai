@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "outputDirectory": "public",
+  "functions": { "api/**/*.js": { "maxDuration": 60 } },
+  "routes": [
+    { "src": "/api/research",      "dest": "/api/research.js" },
+    { "src": "/api/bulk-research", "dest": "/api/bulk-research.js" },
+    { "src": "/api/run/(.*)",      "dest": "/api/run/[id].js" },
+    { "src": "/(.*)",              "dest": "/public/$1" }
+  ]
+}
